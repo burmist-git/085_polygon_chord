@@ -13,21 +13,21 @@ CXXFLAGS += -fconcepts
 
 #----------------------------------------------------#
 
-all: fourier_series
+all: polygon_chord
 
 .PHONY: printmakehelp_and_reminder
-printmakehelp_and_reminder: fourier_series.cc Makefile
+printmakehelp_and_reminder: polygon_chord.cc Makefile
 	$(info  /******************************************************************************/)
-	$(info  * task --> printmakehelp_and_reminder: fourier_series.cc Makefile          *)
+	$(info  * task --> printmakehelp_and_reminder: polygon_chord.cc Makefile          *)
 	$(info  * $$@ ----> $@                                         *)
 	$(info  * $$< --------------------------------> $<                   *)
 	$(info  * $$^ --------------------------------> $^          *)
 	$(info  /******************************************************************************/)
 
-fourier_series: fourier_series.cc
+polygon_chord: polygon_chord.cc
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
 clean:
-	rm -f fourier_series
+	rm -f polygon_chord
 	rm -f *~
-	rm -f $(OUTLIB)*.o
+
